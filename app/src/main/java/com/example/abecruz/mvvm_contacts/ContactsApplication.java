@@ -13,17 +13,17 @@ import io.reactivex.schedulers.Schedulers;
  * Created by albertocruz on 25/10/17.
  */
 
-public class PeopleApplication extends Application {
+public class ContactsApplication extends Application {
 
     private PeopleService peopleService;
     private Scheduler scheduler;
 
-    private static PeopleApplication get(Context context) {
-        return (PeopleApplication) context.getApplicationContext();
+    private static ContactsApplication get(Context context) {
+        return (ContactsApplication) context.getApplicationContext();
     }
 
-    public static PeopleApplication create(Context context) {
-        return PeopleApplication.get(context);
+    public static ContactsApplication create(Context context) {
+        return ContactsApplication.get(context);
     }
 
     public PeopleService getPeopleService() {

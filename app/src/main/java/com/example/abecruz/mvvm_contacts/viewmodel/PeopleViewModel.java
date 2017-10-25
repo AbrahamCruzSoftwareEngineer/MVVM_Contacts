@@ -7,7 +7,7 @@ import android.databinding.ObservableInt;
 import android.support.annotation.NonNull;
 import android.view.View;
 
-import com.example.abecruz.mvvm_contacts.PeopleApplication;
+import com.example.abecruz.mvvm_contacts.ContactsApplication;
 import com.example.abecruz.mvvm_contacts.R;
 import com.example.abecruz.mvvm_contacts.model.People;
 import com.example.abecruz.mvvm_contacts.model.data.PeopleFactory;
@@ -57,11 +57,11 @@ public class PeopleViewModel extends Observable {
 
   private void fetchPeopleList() {
 
-    PeopleApplication peopleApplication = PeopleApplication.create(context);
-    PeopleService peopleService = peopleApplication.getPeopleService();
+    ContactsApplication contactsApplication = ContactsApplication.create(context);
+    PeopleService peopleService = contactsApplication.getPeopleService();
 
     Disposable disposable = peopleService.fetchPeople(PeopleFactory.RANDOM_USER_URL)
-        .subscribeOn(peopleApplication.subscribeScheduler())
+        .subscribeOn(contactsApplication.subscribeScheduler())
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(new Consumer<PeopleResponse>() {
           @Override public void accept(PeopleResponse peopleResponse) throws Exception {
