@@ -1,12 +1,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-<!--    <data>
+    <data>
 
         <variable
             name="peopleViewModel"
             type="com.example.abecruz.mvvm_contacts.viewmodel.ItemPeopleViewModel"/>
-    </data>-->
+    </data>
 
 
     <RelativeLayout

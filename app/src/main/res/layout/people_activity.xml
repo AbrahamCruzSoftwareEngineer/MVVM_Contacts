@@ -4,14 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-<!--
     <data>
 
         <variable
             name="mainViewModel"
             type="com.example.abecruz.mvvm_contacts.viewmodel.PeopleViewModel"/>
     </data>
--->
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
