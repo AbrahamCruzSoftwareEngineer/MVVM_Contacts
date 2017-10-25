@@ -22,7 +22,7 @@ public class PeopleDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         peopleDetailActivityBinding =
                 DataBindingUtil.setContentView(this, R.layout.people_detail_activity);
-        setSupportActionBar(peopleDetailActivityBinding.toolbar);
+//        setSupportActionBar(peopleDetailActivityBinding.toolbar);
         displayHomeAsUpEnabled();
         getExtrasFromIntent();
     }
