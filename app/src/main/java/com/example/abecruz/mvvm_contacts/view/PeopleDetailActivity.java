@@ -6,6 +6,8 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
+import android.view.View;
 
 import com.example.abecruz.mvvm_contacts.R;
 import com.example.abecruz.mvvm_contacts.databinding.PeopleDetailActivityBinding;
@@ -18,13 +20,16 @@ public class PeopleDetailActivity extends AppCompatActivity {
 
     private PeopleDetailActivityBinding peopleDetailActivityBinding;
 
+    private CardView cardView;
+
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        peopleDetailActivityBinding =
-                DataBindingUtil.setContentView(this, R.layout.people_detail_activity);
-//        setSupportActionBar(peopleDetailActivityBinding.toolbar);
+        peopleDetailActivityBinding = DataBindingUtil.setContentView(this, R.layout.people_detail_activity);
+        cardView = (CardView) findViewById(R.id.Exo_CardView_item);
         displayHomeAsUpEnabled();
         getExtrasFromIntent();
+        setOnclickToCardView(this);
+
     }
 
     public static Intent launchDetail(Context context, People people) {
@@ -45,5 +50,15 @@ public class PeopleDetailActivity extends AppCompatActivity {
         PeopleDetailViewModel peopleDetailViewModel = new PeopleDetailViewModel(people);
         peopleDetailActivityBinding.setPeopleDetailViewModel(peopleDetailViewModel);
         setTitle(people.name.title + "." + people.name.firts + " " + people.name.last);
+    }
+
+    public void setOnclickToCardView(final Context context){
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent ExoActivity = new Intent(context, ExoPlayerActivity.class);
+                startActivity(ExoActivity);
+            }
+        });
     }
 }

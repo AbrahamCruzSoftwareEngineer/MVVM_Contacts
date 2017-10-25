@@ -3,12 +3,14 @@ ext {
   //Version
   supportVersion = '26+'
 
+  //'com.squareup.retrofit2:retrofit:2.2.0'
   retrofitVersion = '2.2.0'
   rxAndroidVersion = '2.0.1'
   rxJavaVersion  = '2.0.2'
 
   glideVersion = '3.6.1'
   circleImageVersion = '1.3.0'
+  exoPlayerVersion = 'r2.2.0'
 
   junitVersion = '4.12'
   mockitoVersion = '1.10.19'
@@ -22,6 +24,7 @@ ext {
 
   glidePackage = 'com.github.bumptech.glide'
   hdodenhofPackage = 'de.hdodenhof'
+  exoPlayerPackage = 'com.google.android.exoplayer'
 
 
   junitPackage = 'junit'
@@ -53,7 +56,7 @@ ext {
 
   glide = buildDependency(glidePackage, 'glide', glideVersion)
   circleImageView = buildDependency(hdodenhofPackage, 'circleimageview', circleImageVersion)
-
+  exoPlayer = buildDependency(exoPlayerPackage, 'exoplayer', exoPlayerVersion)
 
   testingDependencies = [
 

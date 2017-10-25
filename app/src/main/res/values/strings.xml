@@ -4,5 +4,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="error_loading_people">There seems to have been some error.</string>
-    <string name="default_loading_people">Press the button to load people!</string>
+    <string name="default_loading_people">Trigger the API with People</string>
+    <string name="exoplayer_click_to_view">Exoplayer Click to View</string>
+
+    <string name="title_activity_exo_player">ExoPlayerActivity</string>
+    <string name="exo_button">Back to Details</string>
+    <string name="exo_content">Click Me!</string>
 </resources>

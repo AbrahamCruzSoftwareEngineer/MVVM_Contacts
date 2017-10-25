@@ -30,6 +30,7 @@ android {
 
 
 
+
 dependencies {
 
     compile supportDependencies.appCompat
@@ -46,9 +47,11 @@ dependencies {
 
     compile circleImageView
     compile glide
+    compile exoPlayer
 
     testCompile testingDependencies.junit
     testCompile testingDependencies.mockito
     testCompile testingDependencies.robolectric
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-v4:25.3.1'
 }

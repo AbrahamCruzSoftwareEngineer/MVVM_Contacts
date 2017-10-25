@@ -164,6 +164,7 @@
 
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/Exo_CardView_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/spacing_large"
@@ -196,31 +197,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
+                                android:gravity="center"
                                 android:layout_marginStart="14dp"
                                 android:layout_toEndOf="@+id/image_home"
-                                android:text="@{peopleDetailViewModel.gender}"/>
-
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:id="@+id/image_gender"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/spacing_medium"
-                                android:src="@drawable/ic_business_24dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_marginStart="14dp"
-                                android:layout_toEndOf="@+id/image_gender"
-                                android:text="@{peopleDetailViewModel.address}"/>
+                                android:text="@string/exoplayer_click_to_view"/>
 
 
                         </RelativeLayout>
